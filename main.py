@@ -18,7 +18,7 @@ st.markdown("""
         background-color: #fff5f5;
     }
     
-    /* Style Tab yang lebih jelas */
+    /* Style Tab */
     .stTabs [data-baseweb="tab-list"] {
         gap: 10px;
     }
@@ -57,7 +57,7 @@ st.markdown("""
     h1 { color: #8a0000; text-align: center; font-family: sans-serif; }
     h3 { color: #b30000; }
     
-    /* Kotak Deskripsi Proyek (Info Box) - INI YG KEMARIN HILANG */
+    /* Kotak Deskripsi Proyek */
     .info-box {
         background-color: #ffffff;
         padding: 20px;
@@ -94,17 +94,16 @@ st.sidebar.title("Panel Kontrol")
 model_choice = st.sidebar.radio("Pilih Model AI:", ["Random Forest (Akurasi 100%)", "SVM (Akurasi 92.2%)"])
 
 st.sidebar.markdown("---")
-st.sidebar.info("💡 **Tips:** Isi data secara berurutan dari Tab 1 sampai Tab 3, lalu tekan tombol Analisis.")
+st.sidebar.info("💡 **Tips:** Pilih model Random Forest untuk hasil paling akurat.")
 
 if "SVM" in model_choice:
     selected_model = model_svm
 else:
     selected_model = model_rf
 
-# --- 5. Judul & Deskripsi Proyek (SUDAH KEMBALI) ---
+# --- 5. Judul & Deskripsi Proyek ---
 st.title("🫀 Sistem Deteksi Dini Penyakit Jantung")
 
-# Kotak Penjelasan Proyek
 st.markdown("""
 <div class="info-box">
     <h4>Tentang Proyek Ini</h4>
@@ -152,6 +151,11 @@ with tab3:
 
 # --- 7. Tombol & Hasil ---
 st.markdown("---")
+
+# === BAGIAN BARU: PESAN PENGINGAT ===
+st.info("👉 **Silahkan isi lengkap 3 kategori di atas (Profil, Tanda Vital, & Rekam Jantung) untuk mendapatkan hasilnya.**")
+# ====================================
+
 if st.button("🔍 ANALISIS RISIKO JANTUNG"):
     
     # Setup data
