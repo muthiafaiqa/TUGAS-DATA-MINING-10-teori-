@@ -89,7 +89,6 @@ if not scaler:
     st.stop()
 
 # --- 4. Sidebar (Navigasi) ---
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2503/2503506.png", width=80)
 st.sidebar.title("Panel Kontrol")
 model_choice = st.sidebar.radio("Pilih Model AI:", ["Random Forest (Akurasi 100%)", "SVM (Akurasi 92.2%)"])
 
@@ -108,8 +107,9 @@ st.markdown("""
 <div class="info-box">
     <h4>Tentang Proyek Ini</h4>
     <p>Selamat datang di aplikasi <strong>Heart Disease Prediction System</strong>. 
-    Aplikasi ini menggunakan algoritma <em>Machine Learning</em> canggih untuk menganalisis risiko penyakit jantung berdasarkan data medis Anda. 
-    Tujuannya adalah untuk memberikan deteksi dini yang akurat dan cepat.</p>
+    Aplikasi ini membantu memprediksi risiko penyakit jantung berdasarkan data medis sederhana Anda.
+Masukkan data seperti umur, tekanan darah, dan kolesterol — lalu sistem akan menilai apakah Anda berisiko atau tidak.
+Tujuannya agar Anda bisa mengetahui kondisi jantung lebih awal.</p>
 </div>
 """, unsafe_allow_html=True)
 
